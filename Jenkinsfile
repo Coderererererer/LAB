@@ -2,9 +2,6 @@ pipeline {
 agent any
 options {
 timestamps()
-
-практика 1. установка и настройка jenkins 3
-
 }
 stages {
 stage('Checkout') {
@@ -38,9 +35,6 @@ success {
 echo 'Сборка прошла успешно'
 }
 failure {
-
-практика 1. установка и настройка jenkins 4
-
 echo 'Сборка завершилась с ошибкой'
 }
 }
