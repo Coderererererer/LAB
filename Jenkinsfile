@@ -33,15 +33,16 @@ pipeline {
     }
     
     // FIX 2: Formatted the post section properly with new lines and indentation
-    post {
-        always {
+   post {
+    always {
+        node {
             junit 'result.xml'
         }
-        success {
-            echo 'Сборка прошла успешно, Quality Gate пройден'
-        }
-        failure {
-            echo 'Сборка завершилась с ошибкой'
-        }
+    }
+    success {
+        echo 'Сборка прошла успешно, Quality Gate пройден'
+    }
+    failure {
+        echo 'Сборка завершилась с ошибкой'
     }
 }
