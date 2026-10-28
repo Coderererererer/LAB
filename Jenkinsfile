@@ -47,7 +47,7 @@ pipeline {
     post {
         always {
             // Обязательно оборачиваем в node с меткой, иначе упадет
-            node('master') {
+            node {
                 junit 'result.xml'
             }
         }
