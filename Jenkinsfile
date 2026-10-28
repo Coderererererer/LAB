@@ -30,7 +30,7 @@ pipeline {
     post {
         always {
             // Обязательно оборачиваем в node, иначе упадёт с MissingContextVariableException
-            node {
+            node('master') {
                 junit 'result.xml'
             }
         }
